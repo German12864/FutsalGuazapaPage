@@ -6,281 +6,190 @@
     <title>Programación de Partidos</title>
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: #ffffff;
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
-
-        .schedule-container {
-            background-color: rgba(0, 0, 0, 0.85);
-            border-radius: 15px;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
-        .logo-container {
-            margin-bottom: 20px;
-        }
-
-        .logo-container img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        .program-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #f39c12;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        .day-header {
-            background-color: #f39c12;
-            padding: 10px;
-            text-align: center;
-            font-size: 1.3em;
-            margin-bottom: 10px;
             border-radius: 10px;
-            color: #000;
         }
-
-        .match {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #34495e;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 0.9em;
-        }
-
-        .match:hover {
-            background-color: #2ecc71;
-            transform: scale(1.05);
-        }
-
-        .team {
-            flex: 1;
+        h1 {
             text-align: center;
-            font-size: 1.1em;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
         }
-
-        .time {
-            background-color: #f39c12;
+        .day {
+            background: #ffae00;
             color: #000;
-            padding: 5px 10px;
-            border-radius: 20px;
+            padding: 10px;
+            margin: 15px 0;
+            text-align: center;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
         }
-
-        .femenil .time {
-            background-color: #e74c3c;
+        .match {
+            padding: 15px;
+            background: #444;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .femenil .team:after {
-            content: " (F)";
-            font-weight: normal;
+        .match:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
         }
-
-        .animation-container {
-            animation: fadeIn 1s ease-out forwards;
+        .match.femenino {
+            background: #e91e63;
         }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .time {
+            font-size: 16px;
+            color: #ffea00;
+            margin-bottom: 5px;
+            display: inline-block;
         }
-
-        @media (max-width: 600px) {
-            .match {
-                font-size: 0.8em;
-            }
-
-            .program-title {
-                font-size: 1.8em;
-            }
-
-            .day-header {
-                font-size: 1.1em;
-            }
-
-            .time {
-                font-size: 0.8em;
-                padding: 4px 8px;
-            }
+        .teams {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .logo {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="schedule-container">
-        <div class="program-title">Programación de Partidos</div>
-        <div class="logo-container">
-            <img src="https://i.imgur.com/AF4PrbF.png
-" alt="Logo de la Liga">
+    <div class="container">
+        <h1>Programación de Partidos</h1>
+        
+        <div class="day">LUNES 12/08/24</div>
+        <div class="match femenino">
+            <span class="time">6:00 PM</span>
+            <div class="teams">OLIMPIC VS MILAN</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">REAL MADRID VS JUVENTUS</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">NEWCASTLE VS RODEO#2</div>
+        </div>
+        <div class="match">
+            <span class="time">8:15 PM</span>
+            <div class="teams">CRUZ AZUL VS OLIMPIC</div>
         </div>
         
-        <div class="animation-container">
-            <div class="day-header">LUNES 12/08/24</div>
-            <div class="match femenil">
-                <div class="team">OLIMPIC</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">MILAN</div>
-            </div>
-            <div class="match">
-                <div class="team">REAL MADRID</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">JUVENTUS</div>
-            </div>
-            <div class="match">
-                <div class="team">NEWCASTLE</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">RODEO#2</div>
-            </div>
-            <div class="match">
-                <div class="team">CRUZ AZUL</div>
-                <div class="time">8:15 PM</div>
-                <div class="team">OLIMPIC</div>
-            </div>
+        <div class="day">MARTES 13/08/24</div>
+        <div class="match femenino">
+            <span class="time">6:00 PM</span>
+            <div class="teams">SEVILLA VS VALENCIA</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">TALLERES VS OLIMPIC</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">ARSENAL VS RODEO#2</div>
+        </div>
+        <div class="match">
+            <span class="time">8:45 PM</span>
+            <div class="teams">BORUSSIA VS SEVILLA</div>
+        </div>
+        
+        <div class="day">MIERCOLES 14/08/24</div>
+        <div class="match femenino">
+            <span class="time">6:00 PM</span>
+            <div class="teams">S.ANTONIO#2 VS OLIMPIC</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">YOGUI.A VS VALENCIA</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">B.LEVERKUSEN VS TROPIC FC</div>
+        </div>
+        <div class="match">
+            <span class="time">8:15 PM</span>
+            <div class="teams">REDBULL VS JUVENTUS</div>
+        </div>
+        
+        <div class="day">JUEVES 15/08/24</div>
+        <div class="match femenino">
+            <span class="time">6:00 PM</span>
+            <div class="teams">COLON VS PSG</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">BARATILLO VS LEON</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">GALAXI VS ATLETICO</div>
+        </div>
+        <div class="match">
+            <span class="time">8:15 PM</span>
+            <div class="teams">RIVER VS NEWCASTLE</div>
+        </div>
+        
+        <div class="day">VIERNES 16/08/24</div>
+        <div class="match femenino">
+            <span class="time">6:00 PM</span>
+            <div class="teams">THE QUEEN VS SEVILLA</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">RD1 VS REDBULL</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">VALENCIA VS TORREJAS FC</div>
+        </div>
+        <div class="match">
+            <span class="time">8:15 PM</span>
+            <div class="teams">ROMA VS QUEZONETA</div>
+        </div>
+        
+        <div class="day">SABADO 17/08/24</div>
+        <div class="match">
+            <span class="time">6:00 PM</span>
+            <div class="teams">HALCONES FC VS FC CHAMPAGNE</div>
+        </div>
+        <div class="match">
+            <span class="time">6:45 PM</span>
+            <div class="teams">SEVILLA VS REAL MADRID</div>
+        </div>
+        <div class="match">
+            <span class="time">7:30 PM</span>
+            <div class="teams">B.LEVERKUSEN VS CLASE A</div>
+        </div>
+        <div class="match">
+            <span class="time">8:15 PM</span>
+            <div class="teams">POCO LOCO VS CRUZ AZUL</div>
         </div>
 
-        <div class="animation-container">
-            <div class="day-header">MARTES 13/08/24</div>
-            <div class="match femenil">
-                <div class="team">SEVILLA</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">VALENCIA</div>
-            </div>
-            <div class="match">
-                <div class="team">TALLERES</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">OLIMPIC</div>
-            </div>
-            <div class="match">
-                <div class="team">ARSENAL</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">RODEO#2</div>
-            </div>
-            <div class="match">
-                <div class="team">BORUSSIA</div>
-                <div class="time">8:45 PM</div>
-                <div class="team">SEVILLA</div>
-            </div>
+        <div class="logo">
+            <img src="	https://i.imgur.com/AF4PrbF.png" alt="Logo de la Liga">
         </div>
-
-        <div class="animation-container">
-            <div class="day-header">MIERCOLES 14/08/24</div>
-            <div class="match femenil">
-                <div class="team">S.ANTONIO#2</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">OLIMPIC</div>
-            </div>
-            <div class="match">
-                <div class="team">YOGUI.A</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">VALENCIA</div>
-            </div>
-            <div class="match">
-                <div class="team">B.LEVERKUSEN</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">TROPIC FC</div>
-            </div>
-            <div class="match">
-                <div class="team">REDBULL</div>
-                <div class="time">8:15 PM</div>
-                <div class="team">JUVENTUS</div>
-            </div>
-        </div>
-
-        <div class="animation-container">
-            <div class="day-header">JUEVES 15/08/24</div>
-            <div class="match femenil">
-                <div class="team">COLON</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">PSG</div>
-            </div>
-            <div class="match">
-                <div class="team">BARATILLO</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">LEON</div>
-            </div>
-            <div class="match">
-                <div class="team">GALAXI</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">ATLETICO</div>
-            </div>
-            <div class="match">
-                <div class="team">RIVER</div>
-                <div class="time">8:15 PM</div>
-                <div class="team">NEWCASTLE</div>
-            </div>
-        </div>
-
-        <div class="animation-container">
-            <div class="day-header">VIERNES 16/08/24</div>
-            <div class="match femenil">
-                <div class="team">THE QUEEN</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">SEVILLA</div>
-            </div>
-            <div class="match">
-                <div class="team">RD1</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">REDBULL</div>
-            </div>
-            <div class="match">
-                <div class="team">VALENCIA</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">TORREJAS FC</div>
-            </div>
-            <div class="match">
-                <div class="team">ROMA</div>
-                <div class="time">8:15 PM</div>
-                <div class="team">QUEZONETA</div>
-            </div>
-        </div>
-
-        <div class="animation-container">
-            <div class="day-header">SABADO 17/08/24</div>
-            <div class="match">
-                <div class="team">OLIMPIC</div>
-                <div class="time">6:00 PM</div>
-                <div class="team">MILAN</div>
-            </div>
-            <div class="match">
-                <div class="team">REAL MADRID</div>
-                <div class="time">6:45 PM</div>
-                <div class="team">JUVENTUS</div>
-            </div>
-            <div class="match">
-                <div class="team">NEWCASTLE</div>
-                <div class="time">7:30 PM</div>
-                <div class="team">RODEO#2</div>
-            </div>
-            <div class="match">
-                <div class="team">CRUZ AZUL</div>
-                <div class="time">8:15 PM</div>
-                <div class="team">OLIMPIC</div>
-            </div>
-        </div>
-
     </div>
 </body>
 </html>
